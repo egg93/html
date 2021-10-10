@@ -1,220 +1,211 @@
 <!doctype html>
 <html>
-<head>
-<title></title>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <title>로드맵 1. 컴퓨터, 웹, 코딩, 프로그래밍의 시작: 211008</title>
+    <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-30NPPB5GV9');
-</script>
-</head>
-
-<body>
-<h2>3. 인터넷과 웹</h2>
-<h3>16. 원시웹</h3>
-인터넷 VS 웹<br>
-다르다.
-인터넷이 도로라면 웹은 도로 위를 달리는 차 한대
-인터넷
-
-1960년에 인터넷이 등장.
-무려 30년이 지난 후에 웹이 등장.
-
-1960년대의 화두 -> 핵
-
-해당 시기의 통신시스템이 중앙집중적, 핵공격에 통신이 마비 -> 핵공격에도 끄떡없는 통신의 중요성 대두<br>
--> 인터넷의 발명 -> 통신시스템이 분산되어 있음.<br>
-<img src="211009_internet.PNG" width="450"><br>
-
-1990년 웹의 출현
-
-웹의 고향? swiss<br>
-1980년<br>
-스위스제네바: CERN 유럽 입자 물리 연구소<br>
-LHC: 광입자 가속. 아주 가장 작은 입자를 보는 장치.<br>
-헥스포선<br>
-
-팀 버너스 리: enquire (무엇이든 물어보세요와 같은 책)<br>
-
-1990.10 웹페이지를 만드는 편집기<br>
-1990.12 info.cern.ch: 웹의 메소포타미아<br>
-
-primitive WEB<br>
-
-<h3>17. 인터넷을 여는 열쇠: 서버와 클라이언트</h3>
-
-인터넷이 동작하는 가장 기본적인 원리<br>
-
-팀 버너스 리 두 개의 컴퓨터 장만<br>
-웹 브라우저, 웹 서버가 인터넷으로 연결되어 있음<br>
-웹 서버: http://info.cern.ch / index.html<br>
-웹 브라우저: http://info.cern.ch/index.html<br>
-
-웹 브라우저는 인터넷을 통해 해당 주소가 담겨 있는 웹 서버 쪽으로 통신 보냄.<br>
-웹 서버는 하드디스크에서 index.html를 찾아낸 후 웹 브라우저 쪽으로 재전송.<br>
-웹 브라우저가 웹서버에서 만든 html을 해석한 후 다시 화면에 띄움.<br>
-
-웹 브라우저: 정보 요청 = request / client, 웹 서버: 정보 응답 = response / server<br>
-
-ex) game client / game server, chatting client / chatting server<br>
-
-업체에 대행하는 것: web hosting / 직접 설치하는 것: web server<br>
-
-우리가 공부를 하는 최종적인 목표는 이해하는 것이 아니라 익숙해지는 것.<br>
-
-<h2>웹서버와 운영</h2>
-<h3>18. 웹서버 운영 (github를 이용한 호스팅)</h3>
-
-웹서버를 빌려주는 회사: 웹호스팅 업체
-
-내 컴퓨터에 다른 사람이 접근할 수 있게 하고 싶지만 불가능.
-why? 웹서버가 설정되어 있지 않아서. 직접 설정하는 건 힘드니 웹 호스팅회사에 맡김.
-
-host: 인터넷에 접속되어 있는 컴퓨터 한 대 한 대<br>
-hosting<br>
-webhosting<br>
-static web hosting<br>
-dynamic web hosting<br>
-
-현재까지 배운 걸로만 웹페이지를 만들 때 추천 웹호스팅 검색어: free static web hosting<br>
-https://www.bitballoon.com/<br>
-http://neocities.org/<br>
-Amazon S3<br>
-Google Cloud Storage<br>
-Azure Blob<br>
-
-<h3>19. 웹서버 운영하기 - 웹서버 소개</h3>
-제대로 작동하는 방법은 한가지지만 제대로 작동하지 않는 방법은 수십가지.
-
-하나의 문제를 해결하는 데에는 며칠이 걸리지만 그 하나의 문제를 해결하는 과정에서 수많은 지식과 경험을 보답으로 얻게 됨.
-
-apache 설치 필요
-윈도우, mac os, linux마다 설치 방법이 다름
-how to install apache http server (os) 2021
-
-<h3>20. 윈도우로 웹서버 운영하기 1 -웹서버 설치 </h3>
-
-how to install apache http server windows, english<br>
-Bitnami WAMP Stack<br>
-bitnami 매니저 위치: %bitnami_home%/
-
-<h3>21. 윈도우로 웹서버 운영하기 2 - 웹서버와 HTTP</h3>
-http://127.0.0.1/index.html
-127.0.0.1 => Internet Protocol Address 중에서도 웹 브라우저가 설치되어 있는 각자의 웹 서버를 가리킴.<br>
-웹 브라우저가 자신의 컴퓨터에 설치되어 있는 자신의 웹 서버에 접속해서 index.html을 원해<br>
-
-http:// => 웹 브라우저가 웹 서버에게 요청하는 것. 그러면 웹 서버가 해당 요청을 웹브라우저에게 전송해주는 것<br>
-(http: hyper text transper protocol: 웹페이지를 웹서버와 웹브라우저가 주고 받기 위한 약속)<br>
-file:// => 웹 서버는 개입 X, 웹 브라우저가 직접 html에 접근해서 불러옴
-
-%bitnami_home%/apache2/htdocs/index.html  <br>
-(ht: hypertext documnet)<br>
-
-한 대의 컴퓨터 안에 web browser / web server 함께 존재
-
-<h3>22. 윈도우로 웹서버 운영하기 3 - 웹브라우저와 웹서버 통신</h3>
-두 대의 컴퓨터에서 서로 웹페이지를 주고받는 방식
-
-IPv4 주소: 172.30.1.57
-
-같은 네트워크 안에 있어야 함.
-전세계의 인터넷이 우리 집에 있는 웹서버에 접속하는 방법은 수업 범위와는 다소 벗어남.
-
-<h2>5. 마치며</h2>
-<h3>22. 수업을 마치며(본질)</h3>
-수업 진도가 진행될수록 중요도는 떨어지고 난이도는 올라간다.
-수업 초반은 교양, 수업 후반은 직업
-
-사람이 잘하는 일과 기계가 잘하는 일.
-기계가 잘하는 일을 사람이 하고 있을 때 우리는 답답함과 절망감을 느낄 수 있다.
-
-<h3>23. 수업을 마치며 2</h3>
-공부만 하고 공부한 것을 사용하지 않으면 나중에는 머리가 복잡해져 어떤 것부터 해야할 지 모르게 된다.<br>
-복잡함에 대한 이야기<br>
-눈에 보이지 않는 복잡함<br>
-
-<input type="checkbox"> 테스트횟수: 2
-<input type="checkbox"> 테스트횟수: 4
-<input type="checkbox"> 테스트횟수: 8<br>
-체크박스가 50개라면 테스트 횟수는 ? 2의 50승 => 천조개의 경우의 수<br>
-눈에 보이는 것은 50개의 체크 박스지만 보이지 않는 천조개의 복잡함이 숨어 있다.<br>
-
-개념을 알게 된다는 것은 체크박스가 늘어난다는 것.<br>
-
-잠깐 멈춰서 배운 것을 가지고 스스로 한계에 직면해보라. 그리고 충분히 절망해보라. 절망감이 충분히 성숙했을때 그때가 공부할 때, 그래야 공부가 구원자가 된다.
-
-<h3>24. 수업을 마치며 3 - 앞으로의 길</h3>
- JSP      javascript      CSS
- PHP      HTML&Internet
- Node.js  advertisement
-
-frontend: html & Internet, javascript, css
-backend: JSP PHP Node.js
-
-<h2>6. 부록</h2>
-<h3>24. 코드의 힘</h3>
-<h3>25. 동영상 삽입</h3>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-
-<h3>26. 댓글 기능 추가</h3>
-댓글 서비스는 상당한 기술력을 요구.<br>
-예를 들어 스팸, 들어온 댓글이 스팸인지 아닌지 스팸 차단 기능이 필요해짐.<br>
-댓글에 동영상을 삽입할 수 있는 기능 또한 필요.<br>
-
-디스커스(disqus)라는 서비스를 이용해 댓글 기능 추가<br>
-LiveRe 또한 추천 서비스<br>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://html-t50jo5zwyt.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-<h3>27. 채팅 기능 추가</h3>
-tawk.to: 무료로 채팅 기능 추가 가능
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6161a30f157d100a41ab9498/1fhim9tt2';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
-<h3>28. 방문자 분석기</h3>
-
-google analytics: https://analytics.google.com/<br>
-
-분석에 대해서는 몰라도 일단 데이터를 많이 쌓아놓을 것.<br>
-데이터가 많이 쌓여있어야 분석도 가능.<br>
-
-
-
-</body>
+      gtag('config', 'G-30NPPB5GV9');
+    </script>
+  </head>
+  <body>
+    <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
+    <h2>컴퓨터, 웹, 코딩, 프로그래밍의 시작</h2>
+    <ol>
+      <li><a href = "211007.html">211007</a> - 오리엔테이션 / 웹, 코딩, HTML</li>
+      <li><a href = "211008.html">211008</a> - HTML과 웹페이지</li>
+      <li><a href = "211009.html">211009</a> - 인터넷과 웹 / 웹서버와 운영 / 마치며 / 부록</li>
+    </ol>
+    <h3>인터넷과 웹</h3>
+    <h4>16. 원시웹</h4>
+    <p>
+      인터넷 VS 웹은 다를까?<br>
+      다르다. 인터넷이 도로라면 웹은 도로 위를 달리는 차 한대
+    </p>
+    <p>
+      1960년에 인터넷이 등장.<br>
+      무려 30년이 지난 후에 웹이 등장.<br>
+      1960년대의 화두 -> 핵<br>
+      해당 시기의 통신시스템이 중앙집중적, 핵공격에 통신이 마비 -> 핵공격에도 끄떡없는 통신의 중요성 대두
+      -> 인터넷의 발명 -> 통신시스템이 분산되어 있음.<br>
+      <img src="211009_internet.PNG" width="450"><br><br>
+      1990년 웹의 출현<br>
+      웹의 고향? swiss<br>
+      1980년 -> 스위스제네바: CERN 유럽 입자 물리 연구소<br>
+      LHC: 광입자 가속. 아주 가장 작은 입자를 보는 장치.<br>
+      헥스포선<br><br>
+      팀 버너스 리: enquire (무엇이든 물어보세요와 같은 책)<br><br>
+      1990.10 웹페이지를 만드는 편집기<br>
+      1990.12 <a href="http://info.cern.ch">info.cern.ch</a>: 웹의 메소포타미아<br><br>
+      primitive WEB<br>
+    </p>
+    <h4>17. 인터넷을 여는 열쇠: 서버와 클라이언트</h4>
+    <p>
+      인터넷이 동작하는 가장 기본적인 원리<br><br>
+      팀 버너스 리 두 개의 컴퓨터 장만<br>
+      웹 브라우저, 웹 서버가 인터넷으로 연결되어 있음<br><br>
+      웹 서버: http://info.cern.ch / index.html<br>
+      웹 브라우저: http://info.cern.ch/index.html<br><br>
+      웹 브라우저는 인터넷을 통해 해당 주소가 담겨 있는 웹 서버 쪽으로 통신 보냄.<br>
+      웹 서버는 하드디스크에서 index.html를 찾아낸 후 웹 브라우저 쪽으로 재전송.<br>
+      웹 브라우저가 웹서버에서 만든 html을 해석한 후 다시 화면에 띄움.<br><br>
+      웹 브라우저: 정보 요청 = request / client, 웹 서버: 정보 응답 = response / server<br><br>
+      ex) game client / game server, chatting client / chatting server
+    </p>
+    <p>업체에 대행하는 것: web hosting / 직접 설치하는 것: web server</p>
+    <p>우리가 공부를 하는 최종적인 목표는 이해하는 것이 아니라 익숙해지는 것.</p>
+    <h3>웹서버와 운영</h3>
+    <h4>18. 웹서버 운영 (github를 이용한 호스팅)</h4>
+    <p>웹서버를 빌려주는 회사: 웹호스팅 업체</p>
+    <p>
+      내 컴퓨터에 다른 사람이 접근할 수 있게 하고 싶지만 불가능.
+      why? 웹서버가 설정되어 있지 않아서. 직접 설정하는 건 힘드니 웹 호스팅회사에 맡김.
+    </p>
+    <p>
+      host: 인터넷에 접속되어 있는 컴퓨터 한 대 한 대<br>
+      hosting<br>
+      webhosting<br>
+      static web hosting<br>
+      dynamic web hosting
+    </p>
+    <p>
+      현재까지 배운 걸로만 웹페이지를 만들 때 추천 웹호스팅 검색어: free static web hosting<br>
+      <a href="https://www.bitballoon.com/">https://www.bitballoon.com/<br></a>
+      <a href="http://neocities.org/">http://neocities.org/<br></a>
+      Amazon S3<br>
+      Google Cloud Storage<br>
+      Azure Blob<br>
+    </p>
+    <h4>19. 웹서버 운영하기 - 웹서버 소개</h4>
+    <p>제대로 작동하는 방법은 한가지지만 제대로 작동하지 않는 방법은 수십가지.</p>
+    <p>하나의 문제를 해결하는 데에는 며칠이 걸리지만 그 하나의 문제를 해결하는 과정에서 수많은 지식과 경험을 보답으로 얻게 됨.</p>
+    <p>
+      apache 설치 필요<br>
+      윈도우, mac os, linux마다 설치 방법이 다름<br>
+      how to install apache http server (os) 2021
+    </p>
+    <h4>20. 윈도우로 웹서버 운영하기 1 -웹서버 설치 </h4>
+    <p>
+      how to install apache http server windows, english<br><br>
+      Bitnami WAMP Stack<br><br>
+      bitnami 매니저 위치: %bitnami_home%/
+    </p>
+    <h4>21. 윈도우로 웹서버 운영하기 2 - 웹서버와 HTTP</h4>
+    <p>
+      <strong>http://127.0.0.1/index.html</strong><br>
+      웹 브라우저가 자신의 컴퓨터에 설치되어 있는 자신의 웹 서버에 접속해서 index.html을 원해<br><br>
+      127.0.0.1 => Internet Protocol Address 중에서도 웹 브라우저가 설치되어 있는 각자의 웹 서버를 가리킴.<br><br>
+      http:// => 웹 브라우저가 웹 서버에게 요청하는 것. 그러면 웹 서버가 해당 요청을 웹브라우저에게 전송해주는 것<br>
+      (http: hyper text transper protocol: 웹페이지를 웹서버와 웹브라우저가 주고 받기 위한 약속)<br><br>
+      file:// => 웹 서버는 개입 X, 웹 브라우저가 직접 html에 접근해서 불러옴
+    </p>
+    <p>
+      bitnami 웹 서버가 웹 브라우저가 요청시 해당 html을 불러오는 경로<br>
+      %bitnami_home%/apache2/htdocs/index.html<br>
+      (ht: hypertext documnet)
+    </p>
+    <p>127.0.0.1 => 한 대의 컴퓨터 안에 web browser / web server 함께 존재</p>
+    <h4>22. 윈도우로 웹서버 운영하기 3 - 웹브라우저와 웹서버 통신</h4>
+    <p>두 대의 컴퓨터에서 서로 웹페이지를 주고받는 방식</p>
+    <p>내 PC의 IPv4 주소: 172.30.1.57</p>
+    <p>
+      http://172.30.1.57/index.html<br>
+      같은 네트워크 안에 있어야 함.<br>
+      전세계의 인터넷이 우리 집에 있는 웹서버에 접속하는 방법은 수업 범위와는 다소 벗어남.
+    </p>
+    <h3>5. 마치며</h3>
+    <h4>22. 수업을 마치며(본질)</h4>
+    <p>
+      수업 진도가 진행될수록 중요도는 떨어지고 난이도는 올라간다.<br>
+      수업 초반은 교양, 수업 후반은 직업
+    </p>
+    <p>
+      사람이 잘하는 일과 기계가 잘하는 일.<br>
+      기계가 잘하는 일을 사람이 하고 있을 때 우리는 답답함과 절망감을 느낄 수 있다.
+    </p>
+    <h4>23. 수업을 마치며 2</h4>
+    <p>
+      공부만 하고 공부한 것을 사용하지 않으면 나중에는 머리가 복잡해져 어떤 것부터 해야할 지 모르게 된다.<br>
+      복잡함에 대한 이야기<br>
+      눈에 보이지 않는 복잡함<br><br>
+      <input type="checkbox"> 테스트횟수: 2
+      <input type="checkbox"> 테스트횟수: 4
+      <input type="checkbox"> 테스트횟수: 8<br><br>
+      체크박스가 50개라면 테스트 횟수는 ? 2의 50승 => 천조개의 경우의 수<br><br>
+      눈에 보이는 것은 50개의 체크 박스지만 보이지 않는 천조개의 복잡함이 숨어 있다.<br>
+      개념을 알게 된다는 것은 체크박스가 늘어난다는 것.
+    </p>
+    <p>
+      잠깐 멈춰서 배운 것을 가지고 스스로 한계에 직면해보라. 그리고 충분히 절망해보라. 절망감이 충분히 성숙했을때 그때가 공부할 때, 그래야 공부가 구원자가 된다.
+    </p>
+    <h4>24. 수업을 마치며 3 - 앞으로의 길</h4>
+    <p>
+       JSP&emsp;&emsp;&emsp;javascript&emsp;&emsp;&emsp;&emsp;CSS<br>
+       PHP&emsp;&emsp;&ensp;HTML&Internet<br>
+       Node.js&emsp;advertisement<br><br>
+      frontend: html & Internet, javascript, css<br>
+      backend: JSP PHP Node.js
+    </p>
+    <h3>6. 부록</h3>
+    <h4>24. 코드의 힘</h4>
+    <h4>25. 동영상 삽입</h4>
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    <h4>26. 댓글 기능 추가</h4>
+    <p>
+      댓글 서비스는 상당한 기술력을 요구.<br>
+      예를 들어 스팸, 들어온 댓글이 스팸인지 아닌지 스팸 차단 기능이 필요해짐.<br>
+      댓글에 동영상을 삽입할 수 있는 기능 또한 필요.<br>
+    </p>
+    <p>
+      디스커스(disqus)라는 서비스를 이용해 댓글 기능 추가<br>
+      LiveRe 또한 추천 서비스<br>
+    </p>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://html-t50jo5zwyt.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <h4>27. 채팅 기능 추가</h4>
+    <p>tawk.to: 무료로 채팅 기능 추가 가능</p>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6161a30f157d100a41ab9498/1fhim9tt2';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <h4>28. 방문자 분석기</h4>
+    <p>google analytics: <a href="https://analytics.google.com/">https://analytics.google.com/</a></p>
+    <p>
+      분석에 대해서는 몰라도 일단 데이터를 많이 쌓아놓을 것.<br>
+      데이터가 많이 쌓여있어야 분석도 가능.
+    </p>
+  </body>
 </html>
