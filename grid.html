@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>로드맵 2. CSS: 211010</title>
+    <style>
+      #grid {
+        border: 5px solid purple;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      div {
+        border: 5px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <div>NAVIGATION</div>
+      <div><a href="211010.html">ARTICLE</a></div>
+    </div>
+    <p>두 개의 div를 나란히 베치하기 위해 grid를 쓰기 위해서는 두 개의 div를 감싸는 부모 태그가 필요함</p>
+    <p>
+      1fr: 화면 공간을 frame으로 나누었을 때 나눈 프레임의 1프레임만큼 쓴다.
+    </p>
+  </body>
+</html>
