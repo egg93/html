@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>로드맵 3. Java Script: 211011</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-30NPPB5GV9');
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
+  <div id="grid">
+    <ol>
+      <h2>Java Script</h2>
+      <li><a href = "211011.html">211011</a><br>
+        <div class="explan">오리엔테이션 / HTML과 JS</div>
+      </li>
+      <li><a href = "211012.html">211012</a><br>
+        <div class="explan">데이터타입, 변수, 웹브라우저 제어</div>
+      </li>
+    </ol>
+    <div id="article">
+      <h3>데이터타입, 변수, 웹브라우저 제어</h3>
+      <h4>6. 데이터타입 - 문자열과 숫자</h4>
+      <p>
+        추천 검색어: javascript data type
+      </p>
+      <p>
+        <ul>
+          <li>Primitive values</li>
+          <ul>
+            <li>Boolean type</li>
+            <li>Null type</li>
+            <li>Undefined type</li>
+            <li><strong>Number type</strong></li>
+            <li>BigInt type</li>
+            <li><strong>String type</strong></li>
+            <li>Symbol type</li>
+          </ul>
+          <li>
+            Objects (collections of properties)
+          </li>
+        </ul>
+      </p>
+      <p>
+        1<strong>+</strong>1 => +: 이항 연산자(두개의 피연산자와 한개의 연산자를 가지는 연산) 중에서 산술 연산자<br>
+        <strong>js에서 숫자는 연산이 가능하다</strong>
+      </p>
+      <p>
+        1+1<br>
+        2<br><br>
+        2-1<br>
+        1<br><br>
+        2*4<br>
+        8<br><br>
+        6/2<br>
+        3<br><br>
+      </p>
+      <p>
+        <strong>properties</strong> =>  Object.defineProperty()<br>
+        <img src = "211012_js_properties.png" width="950"><br>
+        string + string = string
+      </p>
+      <p>
+        document.querySelector(<strong>'body'</strong>).style.backgroundColor = <strong>'black'</strong><br>
+        body와 black은 string이란 걸 알 수 있다.
+      </p>
+      <h4>7. 변수와 대입 연산자</h4>
+      <p>
+        변수 vs 상수 => variable vs constant<br>
+        <img src="211012_js_variable_constant.png" width="950"><br>
+        =: 대입연산자 => 좌항과 우항을 결합해서 우항의 값을 만들어낸다.
+      </p>
+      <p>
+        변수를 왜 쓰는가<br>
+        <img src="211012_js_importantOfVariable.png" width="950"><br>
+        변경이 필요할 때 일괄적으로 처리할 수 있다. 예를 들어 수정할 부분이 만개라고 한다면 만개를 일일이 수정할 필요없이 변수를 이용해 한번에 처리 가능.<br>
+        변수를 쓸 때는 꼭 변수 앞에 <strong>var</strong>을 사용하도록 한다. 이유는... 나중에... (var: variable)
+      </p>
+      <p>
+        document.querySelector('body').style.<strong>backgroundColor</strong> = 'black'<br>
+        backgroundColor => 변수<br>
+        = => 대입 연산자<br>
+        black => 대입된 값
+      </p>
+      <h4>8. 웹브라우저 제어</h4>
+      <p>
+        night 버튼을 클릭 시 night mode로 변환하려면 body 태그에 스타일 적용이 필요<br>
+        &lt;body style="background-color: black; color: white"&gt;
+      </p>
+    </div>
+  </body>
+  </html>
