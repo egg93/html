@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>로드맵 3. Java Script: 211013</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-30NPPB5GV9');
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
+  <div id="grid">
+    <ol>
+      <h2>Java Script</h2>
+      <li><a href = "211011.html">211011</a><br>
+        <div class="explan">오리엔테이션 / HTML과 JS</div>
+      </li>
+      <li><a href = "211012.html">211012</a><br>
+        <div class="explan">데이터타입, 변수, 웹브라우저 제어</div>
+      </li>
+      <li><a href = "211013.html">211013</a><br>
+        <div class="explan">CSS 기초 / 프로그램, 프로그래밍, 프로그래머 / 조건문</div>
+      </li>
+    </ol>
+    <div id="article">
+      <input id ="night_day" type="button" value="night" onClick="
+      if (document.querySelector('#night_day').value === 'night'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        /*document.querySelectorAll('a').style.color='white';*/
+        document.querySelector('#night_day').value='day';
+      } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        /*document.querySelectorAll('a').style.color='black';*/
+        document.querySelector('#night_day').value='night';
+      }">
+      <input type="button" value="this.night" onClick="
+      var target = document.querySelector('body');
+      if (this.value === 'this.night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        /*document.querySelectorAll('a').style.color='white';*/
+        this.value='this.day';
+      } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        /*document.querySelectorAll('a').style.color='black';*/
+        this.value='this.night';
+      }">
+      <h3>CSS 기초</h3>
+      <p>로드맵 2. CSS 참고, 스킵</p>
+      <h4>9. style 속성을 이용해서 CSS 사용하기</h4>
+      <h4>10. style 태그를 이용해서 CSS 사용하기</h4>
+      <h4>11. CSS 선택자</h4>
+      <h4>12. 제어할 태그 선택하기</h4>
+      <h3>프로그램, 프로그래밍, 프로그래머</h3>
+      <h4>13. 프로그램, 프로그래밍, 프로그래머</h4>
+      <p></p>
+      <h3>조건문</h3>
+      <h4>14. 조건문 예고</h4>
+      <p>조건문 -> 하나의 흐름대로 X, 조건에 따라 다른 순서의 기능들이 실행되도록 하는 것.<br>
+        단순한 반복문이 아닌 복잡한 업무까지도 가능한 혁명적 도구</p>
+        <p>if문을 사용하여 버튼 하나로 night모드와 day모드를 조작할 수 있는 토글 기능 개발</p>
+        <h4>15. 비교 연산자와 블리언 생활코딩</h4>
+        <p>Comparison Operation & Boolean</p>
+        <p>1===1<br>
+          <script>
+          document.write(1===1);
+          </script><br><br>
+          1===2<br>
+          <script>
+          document.write(1===2);
+          </script><br><br>
+          1&lt;2<br>
+          <script>
+          document.write(1<2);
+          </script><br><br>
+          1&lt;1<br>
+          <script>
+          document.write(1<1);
+          </script>
+        </p>
+        <p>
+          ===, < > ...: 비교 연산자 => 좌항과 우항의 관계에 따라 true or false 둘 중에 하나의 값을 내뱉는 연산자<br><br>
+          boolean => true, false 단 2개의 data로 이루어져 있는 data type
+        </p>
+        <h4>16. 조건문</h4>
+        <p>Conditional Statemnet</p>
+        <p>
+          document.write("1&lt;br&gt;");<br>
+          if(true){<br>
+            document.write("2&lt;br&gt;");<br>
+          }else {<br>
+            document.write("3&lt;br&gt;");<br>
+          }<br>
+          document.write("4&lt;br&gt;");
+        </p>
+        <script>
+        document.write("1<br>");
+        if(true){
+          document.write("2<br>");
+        }else {
+          document.write("3<br>");
+        }
+        document.write("4<br>");
+        </script>
+        <p>
+          document.write("1&lt;br&gt;");<br>
+          if(false){<br>
+            document.write("2&lt;br&gt;");<br>
+          }else {<br>
+            document.write("3&lt;br&gt;");<br>
+          }<br>
+          document.write("4&lt;br&gt;");
+        </p>
+        <script>
+        document.write("1<br>");
+        if(false){
+          document.write("2<br>");
+        }else {
+          document.write("3<br>");
+        }
+        document.write("4<br>");
+        </script>
+        <h4>17. 조건문의 활용</h4>
+        <p>검색어: javascript get value</p>
+        <p>document.querySelector('selector').value</p>
+        <p>
+          &lt;input id ="night_day" type="button" value="night" onClick="<br>
+          if (<strong>document.querySelector('#night_day').value</strong> === 'night'){<br>
+            document.querySelector('body').style.backgroundColor='black';<br>
+            document.querySelector('body').style.color='white';<br>
+            <strong>document.querySelector('#night_day').value</strong>='day';<br>
+          } else {<br>
+            document.querySelector('body').style.backgroundColor='white';<br>
+            document.querySelector('body').style.color='black';<br>
+            <strong>document.querySelector('#night_day').value</strong>='night';<br>
+          }"&gt;
+        </p>
+        <h4>18. 리팩토링 중복의 제거</h4>
+        <p>
+          동작은 그대로 두고, 코드만 효율적으로 개선 -> 가독성 up, 유지 보수 편리성 up, 중복 코드 down   <strong>=> 리팩토링</strong><br><br>
+          <strong>틈틈히 리팩토링하는 것이 필요</strong>
+        </p>
+        <p>document.querySelector('#night_day').value => this.value<br>
+          <strong>this</strong> => 자기 자신을 나타냄</p>
+          <p>var target = document.querySelector('body')</p>
+          <p>
+            코딩을 잘하는 방법<br>
+            <strong>중복을 끝까지 찾아가서 다 없애버려라 !</strong>
+          </p>
+        </div>
+      </body>
+      </html>
