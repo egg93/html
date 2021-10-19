@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>로드맵 3. Java Script: 211014</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30NPPB5GV9');
+  </script>
+  <script>
+    function LinksSetColor(color){
+      var aList = document.querySelectorAll('a');
+      var i = 0;
+      while (i<aList.length) {
+        aList[i].style.color=color;
+        i = i+1;
+      }
+    }
+    function BodySetColor(color){
+      document.querySelector('body').style.color=color;
+    }
+    function BodySetBackgroundColor(color){
+      document.querySelector('body').style.backgroundColor=color;
+    }
+    function nightDayHandler(self){
+      if (self.value === 'this.night'){
+        Body.setBackgroundColor('black');
+        Body.setColor('white');
+        self.value='this.day';
+        Links.setColor('powderBlue');
+      } else {
+        Body.setBackgroundColor('white');
+        Body.setColor('black');
+        self.value='this.night';
+        Links.setColor('blue');
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
+  <div id="grid">
+    <ol>
+      <h2>Java Script</h2>
+      <li><a href = "211011.html">211011</a><br>
+        <div class="explan">오리엔테이션 / HTML과 JS</div>
+      </li>
+      <li><a href = "211012.html">211012</a><br>
+        <div class="explan">데이터타입, 변수, 웹브라우저 제어</div>
+      </li>
+      <li><a href = "211013.html">211013</a><br>
+        <div class="explan">CSS 기초 / 프로그램, 프로그래밍, 프로그래머 / 조건문</div>
+      </li>
+      <li><a href = "211014.html">211014</a><br>
+        <div class="explan">반복문과 배열</div>
+      </li>
+      <li><a href = "211018.html">211018</a><br>
+        <div class="explan">함수</div>
+      </li>
+      <li><a href = "211019.html">211019</a><br>
+        <div class="explan">객체</div>
+      </li>
+    </ol>
+    <div id="article">
+      <input type="button" value="this.night" onClick="
+      nightDayHandler(this);
+      ">
+      <h3>객체</h3>
+      <h4>29. 객체 예고</h4>
+      <p>
+        Object<br>
+        함수와 객체가 따로 존재하는 것이 아닌 함수 기반 위에 객체가 존재.<br>
+        객체의 존재 이유에 대해 집중.<br>
+        객체 또한 정리정돈의 수단 => 함수 또한 많아지고 함수와 연관되어 있는 변수 또한 많아지면 결국 또 복잡도의 한계에 봉착. => 그 해결책으로 함수가 등장.
+      </p>
+      <p>
+        &lt;script&gt;<br>
+        <strong>function setColor(color){</strong><br>
+        &nbsp;var aList = document.querySelectorAll('a');<br>
+        &nbsp;var i = 0;<br>
+        &nbsp;while (i&lt;aList.length) {<br>
+        &nbsp;&nbsp;aList[i].style.color=color;<br>
+        &nbsp;&nbsp;i = i+1;<br>
+        &nbsp;}<br>
+        <strong>}</strong><br>
+        function nightDayHandler(self){<br>
+        &nbsp;var target = document.querySelector('body');<br>
+        &nbsp;if (self.value === 'this.night'){<br>
+        &nbsp;&nbsp;target.style.backgroundColor='black';<br>
+        &nbsp;&nbsp;target.style.color='white';<br>
+        &nbsp;&nbsp;self.value='this.day';<br>
+        <strong>&nbsp;&nbsp;setColor('powderBlue');<br></strong>
+        &nbsp;} else {<br>
+        &nbsp;&nbsp;target.style.backgroundColor='white';<br>
+        &nbsp;&nbsp;target.style.color='black';<br>
+        &nbsp;&nbsp;self.value='this.night';<br>
+        <strong>&nbsp;&nbsp;setColor('blue');<br></strong>
+        &nbsp;}<br>
+      }<br>
+      &lt;/script&gt;
+    </p>
+    <p>
+      비교적 단순한 로직일지라도 후에 유지보수를 위해 함수를 통해 로직에 분명한 이름을 붙여주는 것 또한 좋은 방법임.<br><br>
+      function <strong>setColor</strong>(color){<br>
+      &nbsp;var aList = document.querySelectorAll('a');<br>
+      &nbsp;var i = 0;<br>
+      &nbsp;while (i&lt;aList.length) {<br>
+      &nbsp;&nbsp;aList[i].style.color=color;<br>
+      &nbsp;&nbsp;i = i+1;<br>
+      &nbsp;}<br>
+    }<br>
+    function <strong>setColor</strong>(color){<br>
+    &nbsp;target.style.color=color;<br>
+  }<br><br>
+  이름이 충돌하는 문제점 발생. 이전 코드가 새로운 코드로 덮어씌워지게 됨.<br>
+  코드가 복잡해지면 동일한 함수명이 존재하는지 하나하나 체크하는 것은 사실상 불가능. 중요한 프로젝트에서 이전 함수가 덮어씌워지면 큰 문제로 확산 가능.<br>
+</p>
+<p>
+  서로 연관된 함수와 변수들을 그룹핑해서 사용할 수 있는 도구 => 객체<br>
+  일종의 폴더라고 봐도 무방
+</p>
+<p>
+  document.querySelector('body').style.color=color;<br>
+  document라는 객체에 속해 있는 querySelector()라는 함수라는 것을 유추할 수 있음.<br>
+  객체에 속해 있는 함수 => method
+</p>
+<h4>30. 객체 쓰기와 읽기</h4>
+<p>
+  정보의 양이 많아졌을 때 서로 연관된 정보를 정리정돈하기 위해 배웠던 도구<br>
+  <strong>배열</strong> => 순서에 따라서 정보를 정리 정돈한다는 특징<br>
+  순서 없이 정보를 전달할 수 있는 도구 => <strong>Object</strong><br>
+  그러나 체계없이 무작위로 집어넣는다면 그것은 정리정돈 수납함이 아닌 쓰레기통과 별반 다를 바 없음 => labeling을 통해 구분 => 이름이 있는 정리정돈 상자<br>
+</p>
+<h5>문법</h5>
+<p>
+  &lt;script&gt;<br>
+  var food = <strong>{</strong><br>
+  &nbsp;"banana": "banana",<br>
+  &nbsp;"mango": "mango"<br>
+  <strong>};</strong><br>
+  document.write("banana: "+food.banana+"&lt;br&gt;");<br>
+  document.write("mango: "+food.mango+"&lt;br&gt;");<br>
+  &lt;/script&gt;<br><br>
+  <script>
+    var food = {
+      "banana": "banana",
+      "mango": "mango"
+    };
+    document.write("banana: "+food.banana+"<br>");
+    document.write("mango: "+food.mango+"<br>");
+  </script><br>
+  배열은 [], 객체는 {}
+  데이터 추가<br>
+  food.strawberry = "strawberry";<br>
+  <script>
+    food.strawberry = "strawberry";
+    document.write("strawberry: "+food.strawberry+"<br>"); 
+  </script>
+  데이터 추가 - 띄어쓰기 있을 시<br>
+  food["potato chip"] = "potato chip";<br>
+  <script>
+    food["potato chip"] = "potato chip";
+    document.write("potato chip: "+food["potato chip"]+"<br>"); 
+  </script><br>
+  이름에는 공백을 넣을 수 없음. 그럴 때는 []를 이용.
+</p>
+<h4>31. 객체와 반복문</h4>
+<p>
+  객체에 담겨 있는 모든 데이터를 가져와야 할 때가 있음.<br>
+  추천 검색어: javascript object iterate<br>
+  for...in
+</p>
+<p>
+  &lt;script&gt;<br>
+  for(var key in food){<br>
+  &nbspdocument.write(key+"&lt;br&gt;");<br>
+}<br>
+&lt;/script&gt;<br><br>
+<script>
+  for(var key in food){
+    document.write(key+"<br>");
+  }
+</script><br>
+"banana" => key (가져올 수 있는 정보에 도달할 수 있는 열쇠): "banana"<br>
+cf) 배열에서는 순서가 있다 하여 index라는 표현을 씀<br>
+객체에 담겨 있는 키값을 하나하나 꺼내서 변수값으로 세팅해서 중괄호 안으로 담겨줌.<br><br>
+&lt;script&gt;<br>
+for(var key in food){<br>
+document.write(food[key]+"&lt;br&gt;");<br>
+}<br>
+&lt;/script&gt;<br><br>
+<script>
+  for(var key in food){
+    document.write(food[key]+"<br>");
+  }
+</script><br><br>
+키의 값이 아닌 키에 담겨 있는 데이터의 값을 꺼내고자 할 때 => <strong>객체명[key명]</strong>
+</p>
+<h4>32. 객체프로퍼티와 메소드</h4>
+<p>뒤로 갈수록 몰라도 괜찮다. 앞으로 갈수록 모르면 큰일나는 거다.</p>
+<p>property & method<br><br>
+&lt;script&gt;<br>
+  &nbsp;food.showAll = function(){<br>
+    &nbsp;&nbsp;for(var key in this){<br>
+      &nbsp;&nbsp;&nbsp;document.write(key+": "+this[key]+"&lt;br&gt;");<br>
+    &nbsp;&nbsp;}<br>
+  &nbsp;}<br>
+&lt;/script&gt;<br>
+(= function food.showAll(){} 와 같은 표현식과 다를바 없다.)<br><br>
+<script>
+  food.showAll = function(){
+    for(var key in this){
+      document.write(key+": "+this[key]+"<br>");
+    }
+  }
+  food.showAll();
+</script>
+var key in <strong>this</strong> => 객체의 명이 바뀌어도 유지보수가 용이
+</p>
+<p>
+  객체에 소속된 함수 => method<br>
+  객체에 소속된 변수 => property
+</p>
+<h4>33. 객체의 활용</h4>
+<h3>정리</h3>
+<h4>34. 파일을 쪼개서 정리 정돈하기</h4>
+<h4>35. 라이브러리와 프레임워크</h4>
+<h4>36. UI vs API</h4>
+<h4>37. 수업을 마치며</h4>
+</div>
+</body>
+</html>
