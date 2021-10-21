@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>로드맵 3. Java Script: 211020</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30NPPB5GV9');
+  </script>
+  <script src="colors.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#grid').load("grid_list.html");
+    });
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
+  <div id="grid">
+    
+    <div id="article">
+      <input type="button" value="this.night" onClick="
+      nightDayHandler(this);
+      ">
+      <h3>정리</h3>
+      <h4>34. 파일을 쪼개서 정리 정돈하기</h4>
+      <p>
+        많은 페이지에 공통적으로 들어가는 js의 경우, 하나의 값에 수정이 필요하다면 공통된 페이지마다 수정이 필요하다.
+      </p>
+      <p>
+        공통된 java script 코드 부분을 script 태그를 제외하고 .js 파일을 만든 후 붙여넣기<br>
+        script 태그에 src로 해당 js 파일 삽입하기<br><br>
+        &lt;script src="colors.js"&gt;&lt;/script&gt;
+      </p>
+      <p>
+        js 파일 하나만 수정하면 공통된 부분 일괄 수정 및 재사용 가능 => 유지보수 용이성 up, 가독성 up, 코드와 코드의 의미 명확성 up 
+      </p>
+      <h4>35. 라이브러리와 프레임워크</h4>
+      <p>
+        혼자 만드는 것보다는 다른 사람이 이미 잘 만들어 놓은 것을 부품으로 이용, 내가 만들고자 하는 것을 빠르게 조립해서 만들어 가는 것 => 오늘날 소프트웨어를 만드는 기본적인 방법
+      </p>
+      <p>
+        생산자로서 소비자
+      </p>
+      <p>
+        library vs framework
+        library: 도서관, 내가 만들고자 하는 프로그램의 부품을 가져오는 것.
+        framework: 틀, framework 안에 내가 구현하고자 하는 기능만 조금씩 수정보는 반제품과 같은 것.
+      </p>
+      <p>
+        jQuery: javascript library 중에 가장 오래되고 유명한 library<br>
+        jQuery를 이용하면 생산성 up
+      </p>
+      <p>
+        jQuery 쉽게 다운받는 법 => CDN: Contents Delivery Network
+      </p>
+      <p>
+        $ => jquery를 나타내는 코드<br>
+        $('a') => 모든 a 태그를 jquery로 제어하겠다.<br>
+        $('a').css('color', color);
+      </p>
+      <h4>36. UI vs API</h4>
+      <h4>37. 수업을 마치며</h4>
+    </div>
+  </body>
+  </html>
