@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -12,20 +13,19 @@
 
       gtag('config', 'G-30NPPB5GV9');
     </script>
+    <script>
+    $(document).ready(function(){
+      $('#grid_list').load("grid_list.html");
+    });
+  </script>
     <link rel="stylesheet" href="style.css">
   </haed>
   <body>
     <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
     <div id="grid">
+      <div id="grid_list">
+      </div>
       <ol>
-        <h2>컴퓨터, 웹, 코딩, 프로그래밍의 시작</h2>
-        <li><a href = "211007.html">211007</a><br>
-          <div class="explan">오리엔테이션 / 웹, 코딩, HTML</div></li>
-        <li><a href = "211008.html">211008</a><br>
-          <div class="explan">HTML과 웹페이지</div></li>
-        <li><a href = "211009.html">211009</a><br>
-          <div class="explan">인터넷과 웹 / 웹서버와 운영 / 마치며 / 부록</div></li>
-      </ol>
       <div id="article">
         <h3>HTML과 웹페이지</h3>
         <h4>8. 통계에 기반한 학습</h4>

@@ -1,4 +1,4 @@
-    var Links = {
+var Links = {
       setColor: function(color){
        //var aList = document.querySelectorAll('a');
        //var i = 0;

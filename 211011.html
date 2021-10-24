@@ -5,36 +5,26 @@
   <title>로드맵 3. Java Script: 211011</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-30NPPB5GV9');
+  gtag('config', 'G-30NPPB5GV9');
+  </script>
+  <script>
+  $(document).ready(function(){
+    $('#grid_list').load("grid_list.html");
+  });
   </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
   <div id="grid">
-    <ol>
-      <h2>Java Script</h2>
-      <li><a href = "211011.html">211011</a><br>
-        <div class="explan">오리엔테이션 / HTML과 JS</div>
-      </li>
-      <li><a href = "211012.html">211012</a><br>
-        <div class="explan">데이터타입, 변수, 웹브라우저 제어</div>
-      </li>
-      <li><a href = "211013.html">211013</a><br>
-        <div class="explan">CSS 기초 / 프로그램, 프로그래밍, 프로그래머 / 조건문</div>
-      </li>
-      <li><a href = "211014.html">211014</a><br>
-        <div class="explan">반복문과 배열</div>
-      </li>
-      <li><a href = "211018.html">211018</a><br>
-        <div class="explan">함수</div>
-      </li>
-    </ol>
+    <div id="grid_list">
+    </div>
     <div id="article">
       <h3>오리엔테이션</h3>
       <h4>1. 수업 소개</h4>
@@ -55,7 +45,7 @@
       <p>기본적으로 JS는 HTML 위에서 동작되도록 만들어진 언어</p>
       <p><strong>script 태그 안쪽에 JS가 오도록 약속되어 있음 -> 웹 브라우저는 script 안 쪽을 JS로 인식</strong></p>
       <script>
-        document.write('이것은 JS로 만든 문구임, 1+1은? '+(1+1));
+      document.write('이것은 JS로 만든 문구임, 1+1은? '+(1+1));
       </script>
       <p>이것은 HTML로 만든 문구임, 1+1은? 1+1</p>
       <p>JS는 동적, HTML은 정적</p>

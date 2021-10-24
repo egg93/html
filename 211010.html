@@ -1,126 +1,127 @@
 <!doctype html>
 <html>
-  <head>
-    <title>로드맵 2. CSS: 211011</title>
-    <meta charset="utf-8">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<head>
+  <title>로드맵 2. CSS: 211011</title>
+  <meta charset="utf-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      gtag('config', 'G-30NPPB5GV9');
-    </script>
-    <link rel="stylesheet" href="style.css">
-    <!-- <style>
-      body {
-        margin: 0px;
-      }
-      #grid {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-      }
-      #article{
-        padding: 20px;
-      }
-      .explan {
-        font-size: x-small;
-      }
-       /* #active {
-        color: purple;
-      }
-      .saw {
-        color: gray;
-      } */
-      a {
-        color: black;
-        text-decoration: none;
-      }
-      h1 {
-        font-size: 250%;
-        text-align: center;
-        border-bottom: 5px solid purple;
-        margin: 0px;
-        padding: 20px 0px 20px 0px;
-      }
-      h2 {
-        margin: 0px;
-        padding: 0px 0px 10px 0px;
-      }
-      #grid ol {
-        border-right: 3px solid purple;
-        width: 200px;
-        margin: 0px;
-        padding: 20px;
-      }
-      @media(max-width: 800px) {
-        #grid {
-          display: block;
-        }
-        #grid ol{
-          border-right: none;
-        }
-        h1 {
-          border-bottom: none;
-          font-size: 200%;
-        }
-      }
-    </style> -->
-  </head>
-  <body>
-    <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
-    <!--<h1><a href = "index.html"><font color="purple">입문자를 위한 생활코딩 WEB-N PHP 로드맵</font></a></h1>-->
-    <div id="grid">
-      <ol>
-        <h2>CSS</h2>
-        <!--<li><a href = "211010.html"
-          style="color:orange; text-decoration:underline">211010</a> - 오리엔테이션, CSS의 등장</li>-->
-        <li><a href = "211010.html" class="saw" id="active">211010</a><br>
-          <div class="explan">오리엔테이션 / CSS의 등장 / 박스 모델 / 그리드 / 미디어 쿼리 / 수업을 마치며</div></li>
-      </ol>
-      <div id="article">
-        <h3>오리엔테이션</h3>
-        <h4>1. 수업 소개</h4>
-        <h4>2. CSS 등장 이전의 상황</h4>
-        <p>
-          두 가지 갈림길 - 쉽지만 한계가 있는 방법 / 어렵지만 근본적인 해결책<br>
-          html에 디자인과 관련된 새로운 태그를 만드는 것 / 디자인에 최적화된 새로운 언어를 만드는 것<br><br>
-          초반에는 새로운 태그를 만드는 것을 선택 -> 한계를 느껴 새로운 언어 개발 => <strong>CSS</strong>
-        </p>
-        <p>&lt;font&gt;: 더 이상은 거의 쓰이지 않는 디자인과 관련된 새로운 태그</p>
-        <p>
-          h 태그와 a 태그는 font 태그와는 다르다.<br>
-          h 태그와 a 태그 등 기존의 html 태그는 해당 내용의 정보를 나타내는 것.<br>
-          그러나 font 태그는 정보가 아니라 디자인의 의미만 담긴 것.<br>
-          html 태그의 본질이 흐트러지는 문제 등이 발생
-        </p>
-        <h3>CSS의 등장</h3>
-        <h4>3. CSS의 등장</h4>
-        <p>
-          웹 브라우저는 기본적으로 태그를 html 언어로 인식<br>
-          css는 html 코드와는 완전 다른 언어<br>
-          웹 브라우저에게 이것은 css 문법으로 해석해달라고 html 언어로 알려줘야 함<br>
-          => &lt;style&gt;&lt;/style&gt; (head 태그 안에서 쓰여야 함)
-        </p>
-        <p>
-          CSS를 사용하면 폭발적인 효과가 있기 때문<br>
-          a 태그의 색상을 일괄적으로 바꾸는데 a 태그가 1억 개가 있다면 font 태그의 경우 1억 개를 다 바꾸어야 하지만, CSS의 경우에는 하나만 바꾸면 1억 개가 일괄적으로 바뀐다.<br><br>
-          그리고 CSS의 효과는 웹 페이지의 규모가 커질 수록 효과가 커진다.<br>
-          유지 보수에도 효과적이고 가독성에도 도움이 되고, html의 문서의 정보를 담는 기능에 충실할 수 있다.
-        </p>
-        <p>
-          1. html의 정보 전념에 도움
-          2. css 언어가 html의 font 태그보다 효율적
-        </p>
-        <h4>4. CSS의 기본 문법</h4>
-        <p>
-          스타일 태그 이용 => &lt;style&gt;&lt;/style&gt;<br>
-          <strong>a {</strong><br>
+  gtag('config', 'G-30NPPB5GV9');
+  </script>
+  <script>
+  $(document).ready(function(){
+    $('#grid_list').load("grid_list.html");
+  });
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <style>
+  body {
+  margin: 0px;
+}
+#grid {
+display: grid;
+grid-template-columns: 200px 1fr;
+}
+#article{
+padding: 20px;
+}
+.explan {
+font-size: x-small;
+}
+/* #active {
+color: purple;
+}
+.saw {
+color: gray;
+} */
+a {
+color: black;
+text-decoration: none;
+}
+h1 {
+font-size: 250%;
+text-align: center;
+border-bottom: 5px solid purple;
+margin: 0px;
+padding: 20px 0px 20px 0px;
+}
+h2 {
+margin: 0px;
+padding: 0px 0px 10px 0px;
+}
+#grid ol {
+border-right: 3px solid purple;
+width: 200px;
+margin: 0px;
+padding: 20px;
+}
+@media(max-width: 800px) {
+#grid {
+display: block;
+}
+#grid ol{
+border-right: none;
+}
+h1 {
+border-bottom: none;
+font-size: 200%;
+}
+}
+</style> -->
+</head>
+<body>
+  <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
+  <!--<h1><a href = "index.html"><font color="purple">입문자를 위한 생활코딩 WEB-N PHP 로드맵</font></a></h1>-->
+  <div id="grid">
+    <div id="grid_list">
+    </div>
+    <div id="article">
+      <h3>오리엔테이션</h3>
+      <h4>1. 수업 소개</h4>
+      <h4>2. CSS 등장 이전의 상황</h4>
+      <p>
+        두 가지 갈림길 - 쉽지만 한계가 있는 방법 / 어렵지만 근본적인 해결책<br>
+        html에 디자인과 관련된 새로운 태그를 만드는 것 / 디자인에 최적화된 새로운 언어를 만드는 것<br><br>
+        초반에는 새로운 태그를 만드는 것을 선택 -> 한계를 느껴 새로운 언어 개발 => <strong>CSS</strong>
+      </p>
+      <p>&lt;font&gt;: 더 이상은 거의 쓰이지 않는 디자인과 관련된 새로운 태그</p>
+      <p>
+        h 태그와 a 태그는 font 태그와는 다르다.<br>
+        h 태그와 a 태그 등 기존의 html 태그는 해당 내용의 정보를 나타내는 것.<br>
+        그러나 font 태그는 정보가 아니라 디자인의 의미만 담긴 것.<br>
+        html 태그의 본질이 흐트러지는 문제 등이 발생
+      </p>
+      <h3>CSS의 등장</h3>
+      <h4>3. CSS의 등장</h4>
+      <p>
+        웹 브라우저는 기본적으로 태그를 html 언어로 인식<br>
+        css는 html 코드와는 완전 다른 언어<br>
+        웹 브라우저에게 이것은 css 문법으로 해석해달라고 html 언어로 알려줘야 함<br>
+        => &lt;style&gt;&lt;/style&gt; (head 태그 안에서 쓰여야 함)
+      </p>
+      <p>
+        CSS를 사용하면 폭발적인 효과가 있기 때문<br>
+        a 태그의 색상을 일괄적으로 바꾸는데 a 태그가 1억 개가 있다면 font 태그의 경우 1억 개를 다 바꾸어야 하지만, CSS의 경우에는 하나만 바꾸면 1억 개가 일괄적으로 바뀐다.<br><br>
+        그리고 CSS의 효과는 웹 페이지의 규모가 커질 수록 효과가 커진다.<br>
+        유지 보수에도 효과적이고 가독성에도 도움이 되고, html의 문서의 정보를 담는 기능에 충실할 수 있다.
+      </p>
+      <p>
+        1. html의 정보 전념에 도움
+        2. css 언어가 html의 font 태그보다 효율적
+      </p>
+      <h4>4. CSS의 기본 문법</h4>
+      <p>
+        스타일 태그 이용 => &lt;style&gt;&lt;/style&gt;<br>
+        <strong>a {</strong><br>
           &ensp;color: black;<br>
           <strong>}</strong> => 선택자 (selector)<br><br>
           a {<br>
-          <strong>&ensp;color: black;</strong><br>
+            <strong>&ensp;color: black;</strong><br>
           } => 선언(declaratiion)
         </p>
         <p>
@@ -154,7 +155,7 @@
         <p>
           class="saw active" => 스타일을 넣고 싶은 해당 태그에 class라는 속성을 추가<br><br>
           <strong>.</strong>active {<br>
-          &ensp;color: purple;<br>
+            &ensp;color: purple;<br>
           }<br>
           style 태그 쪽에서 selector 앞에 .를 붙이면 class 속성을 의미하는 selector가 된다.<br><br>
           class 속성 안에는 여러 개의 값이 들어갈 수 있고, 띄어쓰기로 구분<br>
@@ -206,4 +207,4 @@
       </div>
     </div>
   </body>
-</html>
+  </html>

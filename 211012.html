@@ -5,6 +5,7 @@
   <title>로드맵 3. Java Script: 211012</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-30NPPB5GV9"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -12,29 +13,18 @@
 
   gtag('config', 'G-30NPPB5GV9');
   </script>
+  <script>
+    $(document).ready(function(){
+      $('#grid_list').load("grid_list.html");
+    });
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1><a href = "index.html">입문자를 위한 생활코딩 WEB-N PHP 로드맵</a></h1>
   <div id="grid">
-    <ol>
-      <h2>Java Script</h2>
-      <li><a href = "211011.html">211011</a><br>
-        <div class="explan">오리엔테이션 / HTML과 JS</div>
-      </li>
-      <li><a href = "211012.html">211012</a><br>
-        <div class="explan">데이터타입, 변수, 웹브라우저 제어</div>
-      </li>
-      <li><a href = "211013.html">211013</a><br>
-        <div class="explan">CSS 기초 / 프로그램, 프로그래밍, 프로그래머 / 조건문</div>
-      </li>
-      <li><a href = "211014.html">211014</a><br>
-        <div class="explan">반복문과 배열</div>
-      </li>
-      <li><a href = "211018.html">211018</a><br>
-        <div class="explan">함수</div>
-      </li>
-    </ol>
+    <div id="grid_list">
+    </div>
     <div id="article">
       <input type="button" value="night" onClick="
       document.querySelector('body').style.backgroundColor='black';
