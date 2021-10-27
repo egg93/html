@@ -266,18 +266,18 @@ consequat."
 <h4>8.2. PHP 함수의 사용</h4>
 <p>
   웹 브라우저 파라미터를 통해 웹 서버에 있는 파일의 내용을 불러올 수 있는 방법<br><br>
-   우선 new directory, data 생성<br><br>
+   우선 new directory 생성<br><br>
   &lt;?php<br>
-  echo data/id 값에 해당하는 파일의 내용;<br>
+  echo gorago/id 값에 해당하는 파일의 내용;<br>
   ?&gt;<br><br>
   추천 검색어: php file read function<br>
   => file.get.contents<br><br>
   &lt;?php<br> 
-  echo file.get.contents("data/gogo");<br>
+  echo file.get.contents("gorago/gogo");<br>
   ?&gt;<br><br>
-  echo file.get.contents("data/".$_GET['id']);<br><br>
+  echo file.get.contents("gorago/".$_GET['id']);<br><br>
   <?php 
-  echo file.get.contents("data/".$_GET['id']);
+  echo file.get.contents("gorago/".$_GET['id']);
   ?>
 </p>
 <p>
