@@ -1,14 +1,14 @@
-<?php
+ <?php
 function print_list(){
 	$list = scandir('./gorago');
 	$i = 0;
-	while ($i<count($list)){
-		if($list != '.'){
-			if($list != '..'){
-				echo "<li><a href=\"gorago.php?id=$list[$i]\">$list[$i]</a><li>";
-				$i = $i+1;
+	while ($i < count($list)){
+		if($list[$i] != '.'){
+			if($list[$i] != '..'){
+				echo "<li><a href=\"gorago.php?id=$list[$i]\">$list[$i]</a></li>\n";
 			}
 		}
+			$i = $i+1;
 	}
 }
 ?>
@@ -24,10 +24,11 @@ function print_title(){
 <?php
 function print_description(){
 	if (isset($_GET['id'])) {
-		echo file_get_contents("gorago/".$_GET['id'];
+		echo file_get_contents("./gorago/".$_GET['id']);
 	} else
 	echo "11/07 PM 14:00 Park. Jamwon Hangang";
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,22 +39,19 @@ function print_description(){
 </head>
 <body>
 	<h1>GORAGO</h1>
-	<ol>
 		<?php
 		print_list();
 		?>
-
 	</ol>
 	<h2>
 		<?php
-		print_title();
+		 print_title();
 		?>
 	</h2>
 	<p>
 		<?php
 		print_description();
 		?>
-		
 	</p>
 </body>
 </html>
